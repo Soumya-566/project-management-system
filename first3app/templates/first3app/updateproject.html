@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update your project</title>
+	<style type="text/css">
+		body
+		{
+			background-image:url("/static/images/pic1.jpg");
+			background-size:cover;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<form action='{%  url "updateproject" o.username %}' method="POST">
+	{% csrf_token %}
+	<label><h2>Mention week no and mention your project status</h2></label>
+		<textarea  name="projectstatus" rows="10" cols="100" required>
+		</textarea>
+		<br><br>
+		</label><br><br>
+		<label><h2>Enter date</h2>
+		<textarea  name="date" rows="3" cols="30" required>
+		</textarea>
+	</label>
+
+	<label><h2>Write down queries here if you have any</h2></label>
+	<textarea  name="query" rows="6" cols="50">
+	</textarea>
+	<input type="submit" value="Update project">
+</form>
+{% if messages %}
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    	{% endif %}
+</body>
+</center>
+</html>

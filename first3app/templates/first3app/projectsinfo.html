@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projects Info</title>
+	<style type="text/css">
+		.button{
+		background:yellowgreen;
+		width:500px;
+		height:75px;
+
+	}
+	.button:hover
+	{
+		background-color:yellow;
+	}
+	
+	</style>
+</head>
+
+<body style="background-color:lightpink;">
+	<center>
+	<a href='{% url "Projects1519cse1" %}'>
+	<button class="button">2015cse1 Projects</button>
+	
+	</a><br><br>
+	<a href='{% url "Projects1519cse2" %}'>
+	<button class="button">2015cse2 Projects</button>
+	
+	</a><br><br>
+	<a href='{% url "Projects1620cse1" %}'>
+
+	<button class="button">2016Projectscse1</button>
+	</a><br><br>
+	<a href='{% url "Projects1620cse2" %}'>
+	<button class="button">2016Projectscse2</button>
+	</a><br><br>
+	<a href='{% url "Projects2020" %}'>
+	<button class="button">2020Projects</button>
+	</a><br><br>
+</center>
+</body>
+</html>

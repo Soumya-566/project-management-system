@@ -1,0 +1,16 @@
+<table>
+		<tr>
+			<th><h1>Name</h1></th>
+			<th><h2>Areas of expertise</h2></th>
+			<th><h2>Email-id</h2></th>
+			<th><h2>MobileNO</h2></th>
+		</tr>
+		{% for i in o %}
+		<tr>
+			<td><i>{{i.username}}</i></td>
+			<td><h2>{{i.areasofexpertise}}</h2></td>
+			<td><h2>{{i.Emailid}}</h2></td>
+			<td><h2>{{i.Mobileno}}</h2></td>
+		</tr>
+		{% endfor %}
+</table>

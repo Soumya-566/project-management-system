@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Login Page</title>
+	<style type="text/css">
+		.button input[type="submit"]
+		{
+			background:black;
+		}
+		.button:hover
+		{
+			background-color:red;
+			width:400px;
+			height:40px;
+		}
+		body
+		{
+			background-image:url("/static/images/admin.jpg");
+			background-size:cover;
+		}
+	</style>
+</head>
+<body style="background-color:royalblue;">
+
+	<center>
+		<h2>Login Page</h2><br><br>
+		<form action="{% url 'adminlogin' %}" method="POST">
+		{% csrf_token %}
+		<label><b>username name:</b>
+		<input type="text" name="username" required>
+		</label><br><br>
+		<label><b>Enter password:</b>
+		<input type="password" name="password" required>
+		</label><br><br>
+		<input type="submit"  value="Log in"><br><br>
+		</form>
+		{% if messages %}
+		{% for message in messages %}
+		{{message}}
+		{% endfor %}
+		{% endif %}
+</body>
+</center>
+</html>

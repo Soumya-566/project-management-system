@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+      * {
+        margin:0;
+        padding: 0;
+        list-style-type: none;
+        <!--box-sizing: border-box;-->
+      }
+      body {
+        <!--background-size: cover;-->
+   min-height: 600px;
+        font-family: 'Helvetica Neue', sans-serif;
+      }
+   <!--   nav {
+        text-align: center;
+      }-->
+     <!-- .menu {
+        display: inline-block;
+      }-->
+      .menu>li {
+     float: left;
+        width: 300px;
+        height: 40px;
+        line-height: 40px;
+        background-color: green;
+        cursor: pointer;
+        font-size: 20px;
+      }
+ 
+.link{
+  font-size: 20px;
+  color: pink;
+  text-decoration: none;
+  width:50px;
+      }
+.link:hover{
+  background-color:white;
+color: black;
+<!--box-shadow: 0 6px 8px 0 rgba(0,0,0,0.54), 0 17px 50px 0 rgba(0,0,0,0.19);-->
+}
+}
+    </style>
+  </head>
+  <body>
+    <center>
+    <img src="/static/images/maa.jpg" align="center" width="270" height="250">
+  </center>
+  <center>
+  <h1>WELCOME TO GVPCEW</h1>
+  <h1>Project management system</h1><br>
+  <h1>Guide:Y.Soumya Mam</h1>
+</center>
+</img>
+    <nav>
+      <ul class="menu">
+        <li>
+          <a class="link"  href="{% url 'faculty' %}">Faculty login</a>
+        </li>
+        <li>
+          <a class="link" href="{% url 'student' %}">Student Login</a>
+        </li>
+        <li>
+          <a class="link" href="{% url 'studentsignup' %}">Student sign up</a>
+        </li>
+        <li>
+          <a class="link" href="{% url 'facultysignup' %}">Faculty sign up</a>
+        </li>
+        <li>
+          <a class="link" href="{% url 'spasswordreset' %}">Student Reset Password</a>
+        </li>
+        <li>
+          <a class="link" href="{% url 'fpasswordreset' %}">Faculty Reset Password</a>
+        </li>
+        <li>
+          <a class="link" href="{% url 'adminpasswordreset' %}">Admin Reset Password</a>
+        </li>
+        <li>
+          <a class="link" href="{% url 'adminlogin' %}">Admin login</a>
+        </li>
+      </ul>
+    </nav>
+    <h3>
+    
+      <h2>Abstract</h2>
+      <i> Abstract: This project is aimed to develop a project management system.It even provides information about completed projects and the undertaking projects of the final year students.. And also the information about the corresponding faculty who have undertaken those projects are available. Number of projects that he/she has undertaken till now will be mentioned. And also his/her expertise, the technical papers published by them. This facilitates the interaction of students with their corresponding guide and even other guidesand allows teachers to know how the teams are progressing .Here modules are created for the faculty, teams, co-ordinators and admins. The team members have to update the project progress everyday and can even post queries to the corresponding guides if available or to any other guide by using their id’s. To develop this website “Python Django and mysql” is used.</i>    
+    <h2>For any Queries:</h2><br>
+    <h3>
+    Nandini:18jg1a0590.nandini@gvpcew.ac.in</h3>
+    <h3>Soumya:18jg1a0566.soumya@gvpcew.ac.in</h3>
+    <h3>Kalyani:18jg1a0596.kalyani@gvpcew.ac.in</h3>
+  
+  </body>
+  </html>

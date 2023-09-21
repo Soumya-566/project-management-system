@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Login Page</title>
+	<style type="text/css">
+		body{
+			background-image:url("/static/images/valley.jpg");
+			background-size:cover;
+		}
+		.button
+		{
+			color:blue;
+		}
+	</style>
+
+</head>
+<body >
+		<h1>Student Login Page</h1><br><br>
+		<center>
+		<form action="{% url 'student'  %}" method="POST">
+		{% csrf_token %}
+		<label><b>Batch no:</b>
+		<input type="text" name="username" required>
+		</label><br><br>
+		<label><b>Enter password:</b>
+		<input type="password" name="password" required>
+		</label><br><br>
+		<input type="submit" value="Log in"><br><br>
+		<br>
+		<br>
+	</form>
+</center>
+	{% if messages %}
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    	{% endif %}
+</body>
+
+</html>

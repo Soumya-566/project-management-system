@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up for students</title>
+</head>
+<body style="background-color:cyan;">
+	<center>
+	<h2>Sign up Page</h2><br><br>
+	<form action='{% url "studentsignup"  %}' method="POST">
+	{% csrf_token %}
+	<label><b>Batch no:</b>
+	<input type="text" name="username" required>
+	</label><br><br>
+	<input type="checkbox" name="yr">
+	<label>2020</label><br><br>
+	<label><b>Guide:</b>
+	<input type="text" name="fu" required><br><br>
+	</label>
+	<label><b>Project Name:</b>
+	<input type="text" name="Project name" required><br><br>
+	<label><b>Set password:</b>
+	<input type="password" name="password" required><br><br>
+	<input type="submit" value="Create account">
+	</label>
+	</label>
+	</form>
+	{% if messages %}
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    	{% endif %}
+	</center>
+</body>
+</html>	
+
+

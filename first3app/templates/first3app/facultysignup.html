@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body
+		{
+			background-image:url("/static/images/pic3.jpg");
+			background-size:cover;
+		}
+	</style>
+</head>
+<body style="background-color:crimson;">
+	<center>
+	<form action='{% url "facultysignup" %}' method="POST">
+	{% csrf_token %}
+	<label><b>Faculty name:</b>
+	<input type="text" name="fn" required>
+	<!--<textarea  name="fn" rows="" cols="30" required>
+		</textarea>-->
+	</label>
+	<br><br>
+	<label><b>Password:</b>
+	<input type="password" name="pwd" required>
+	</label>
+	<input type="submit" value="Create account">
+	</form>
+	{% if messages %}
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    	{% endif %}
+</body>
+</center>
+</html>
+

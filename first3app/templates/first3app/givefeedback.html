@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remarks</title>
+</head>
+<form action="{% url 'givefeedback' of.username %}" method="POST">
+{% csrf_token %}
+<body style="background-color:lightblue;"> 
+	<center>
+	<h2>Remarks</h2>
+	<label><b>Enter batch no:</b>
+	<!--<input type="textarea"  rows="" cols="30" name="bno" required>-->
+	<textarea  name="Batch no" rows="" cols="20" required>
+		</textarea></label>
+	<br><br>
+	<label><b>Give remarks:</b></label>
+
+	<!--<label><h2>Mention week no and mention your project status</h2></label>-->
+		<textarea  name="feedback" rows="7" cols="50" required>
+		</textarea>
+	<!--<input type="text" name="feedback" required>-->
+	<br><br>
+	<input type="submit" value="Submit">
+</form>
+{% if messages %}
+	{% for message in messages %}
+		{{message}}
+	{% endfor %}
+	{% endif %}
+</body>
+</center>
+</html>

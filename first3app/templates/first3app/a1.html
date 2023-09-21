@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+<style>
+	<style type="text/css">
+		.button{
+		background:green;
+		width:300px;
+		height:50px; 
+	}
+	.button:hover{
+		background-color:yellow;
+	}
+</style>
+</head>
+<body style="background-color:Teal;">
+	<center>
+<a href="{% url 'addadmin' %}">
+<button class="button"><b>Add admin</b></button>
+</a>
+<br>
+<br>
+<a href="{% url 'removestudent' %}">
+		<button class="button"><b>Remove a student</b></button>
+</a>
+<br>
+<br>
+<a href="{% url 'removefaculty' %}">
+<button class="button"><b>Remove a faculty</b></button>
+<br>
+<br>
+</a>
+<a href="{% url 'facultydetails' %}">
+<button class="button"><h2>View facuty details</h2></button>
+<br>
+<br>
+</a>
+<a href="{% url 'studentdetails' %}">
+<button class="button"><h2>View student details</h2></button>
+<br>
+<br>
+</a>
+</body>
+</center>
+</html>

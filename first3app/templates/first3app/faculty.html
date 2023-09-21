@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style type="text/css">
+		body{
+		background-image:url("/static/images/admin.jpg") ;
+		background-size:cover;
+	}
+	</style>
+</head>
+<body style="background-color:mistyrose">
+		<center>
+		<h1>Login Page</h1><br><br>
+		<form action="{% url 'faculty'  %}" method="POST">
+		{% csrf_token %}
+		<label><h2>Faculty name:</h2>
+		<input type="text" name="facultyname" required>
+		</label><br><br>
+		<label><h2>Enter password:</h2>
+		<input type="password" name="password" required>
+		</label><br><br>
+		<input type="submit" value="Log in" width="300" height="30"><br><br>
+		<!--<input type="checkbox">
+		<span>Remember me</span><br>
+		Forgot <a href="#">Password</a>-->
+	</form>
+	</center>
+	{% if messages %}
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    	{% endif %}
+</body>
+</html>

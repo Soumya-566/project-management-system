@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove access</title>
+	<style type="text/css">
+		body
+		{
+			background-image:url("/static/images/pic6.jpg");
+			background-size:cover;
+		}
+	</style>
+</head>
+<body style>
+	<center>
+	<p>Remove a student</p>
+	<form action="{% url 'removestudent' %}" method="POST">
+	{% csrf_token %}
+	<label><h3>Student name:</h3>
+	<input type="text" name="un" required="eeeeee" value="username">
+	</label>
+	<br>
+	<br>
+	<input type="submit" value="Remove">
+</form>
+</center>
+{% if messages %}
+{% for message in messages %}
+{{message}}
+{% endfor %}
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:antiquewhite;">
+	<center>
+		<form>
+	<nav>
+	<a href="{% url 'faculty'  %}">
+
+	<!--<button type="button">Faculty login</button>-->
+	Faculty login
+	</a><br><br>
+</nav>
+	<a href="{% url 'student'  %}">
+	<!--<button type="button">Student login</button>-->
+	Student login
+	</a><br><br>
+
+	<a href="{% url 'studentsignup' %}">
+	<!--<button type="button">
+	</button>-->
+	Student sign up
+	</a><br><br>
+	<a href="{% url 'facultysignup' %}">
+	<!--<button type="button">
+		
+	</button>-->
+	Faculty sign up
+	</a><br><br>
+	<a href="{% url 'adminlogin' %}">
+		Admin login
+	<!--<button type="button">Admin login</button>-->
+	</a><br><br>
+	<a href="{% url 'spasswordreset' %}">
+	<!--<button type="button"><b>Student Reset Password</b></button>-->
+	Student Reset Password
+		</a>
+	<br><br>
+	<a href="{% url 'fpasswordreset' %}">
+	<!--<button type="button"><b>Faculty Reset Password</b></button>-->
+	Faculty Reset Password
+	</a><br><br>
+	<a href="{% url 'adminpasswordreset' %}">
+	<!--<button type="button"><b>Admin Reset Password</b></button>-->
+	Admin Reset Password
+	</a><br><br>
+	<p><b>For any problems contact:<br><br>
+		soumya:18jg1a0566.soumya@gvpcew.ac.in<br><br>
+		nandini:18jg1a0590.nandini@gvpcew.ac.in<br><br>
+		</b></p>
+</form>
+</center>
+</body>
+</html>
